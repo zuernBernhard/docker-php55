@@ -18,3 +18,5 @@ Can be used in docker-compose.yml like this (Webserver mit code from ./src in th
           options:
             max-file: "5"
             max-size: "1m"
+
+This image is configured to work with XDEBUG in PHP-Storm. To get XDebug workig you will have to configure a pathmapping in PHP-Storm for the docroot/docker-Volume.
