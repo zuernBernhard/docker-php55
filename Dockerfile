@@ -10,6 +10,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get -yq  --no-install-recommends install \
         apache2 \
+        graphicsmagick \
         libapache2-mod-php5 \
         php5-curl \
         php5-gd \
