@@ -1,6 +1,22 @@
 # docker-php55
+
+Custom Image for Oxid eShop with encrypted modules.
+
+## Ingredients
 Ubuntu Trusty 64bit with PHP5.5 and Apache, comes with Zend Guard Loader and Zend OPCache
 
+## Configuration
+
+There is some "custom config".
+
+### Apache webserver
+Custom vhost config for the apache webserver can be found in **apache_default**
+
+### XDebug
+Default XDebug configuration for phpstorm is in **xdebug_settings.ini** there are some directives which are "host-Specific" like **xdebug.remote_connect_back** and **xdebug.remote_host** can be overriden by Enviornment variables (see docker-compose example below).
+
+
+## docker-compose example
 Can be used in docker-compose.yml like this (Webserver mit code from ./src in the Document-Root listening on Host-Port 80)
 
     version: '2'

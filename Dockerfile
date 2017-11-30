@@ -48,10 +48,13 @@ RUN echo zend_extension=/usr/lib/php5/20121212/ZendGuardLoader.so > /etc/php5/cl
 ADD apache_default /etc/apache2/sites-available/000-default.conf
 RUN a2enmod rewrite
 
-# Enviornment variables to configure php
+# Environment variables to configure php
 ENV PHP_UPLOAD_MAX_FILESIZE 10M
 ENV PHP_POST_MAX_SIZE 10M
 
+# Environment variables to configure xdebug
+ENV REMOTE_CONNECT_BACK = 1
+ENV REMOTE_HOST = 127.0.0.1
 
 CMD service apache2 restart && tail -f /var/log/apache2/error.log
 
