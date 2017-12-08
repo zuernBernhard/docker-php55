@@ -1,6 +1,9 @@
 FROM ubuntu:trusty
 MAINTAINER Bernhard Zürn <bernhard.zuern@gmail.com>
 
+# Us bash as default-shell
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 # Install packages
 RUN apt-get update -y
 RUN apt-get upgrade -y
@@ -53,10 +56,8 @@ ENV PHP_UPLOAD_MAX_FILESIZE 10M
 ENV PHP_POST_MAX_SIZE 10M
 
 # Environment variables to configure xdebug
-ENV REMOTE_CONNECT_BACK = 1
-ENV REMOTE_HOST = 127.0.0.1
-
-RUN source /etc/envvars
+ENV REMOTE_CONNECT_BACK 1
+ENV REMOTE_HOST 127.0.0.1
 
 CMD service apache2 restart
 
