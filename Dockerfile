@@ -59,6 +59,6 @@ ENV PHP_POST_MAX_SIZE 10M
 ENV REMOTE_CONNECT_BACK 1
 ENV REMOTE_HOST 127.0.0.1
 
-CMD service apache2 restart && tail -f /dev/null
+CMD service apache2 restart && tail -f /var/log/apache2/error.log
 
 EXPOSE 80 22
