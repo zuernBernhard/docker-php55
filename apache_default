@@ -1,7 +1,7 @@
 <VirtualHost *:80>
     ServerAdmin bernhard.zuern@gmail.com
-    ServerAlias flaschen.dev
-    ServerAlias flaschen.dev.*.xip.io
+    ServerAlias flaschen.localhost
+    ServerAlias flaschen.localhost.*.xip.io
     DocumentRoot /var/www/html/src
     <Directory /var/www/>
         DirectoryIndex index.php
@@ -14,4 +14,3 @@
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 </VirtualHost>
-
