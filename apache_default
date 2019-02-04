@@ -1,9 +1,9 @@
 <VirtualHost *:80>
     ServerAdmin bernhard.zuern@gmail.com
-    ServerAlias flaschen.localhost
-    ServerAlias en.flaschen.localhost    
-    ServerAlias flaschen.localhost.*.xip.io
-    ServerAlias en.flaschen.localhost.*.xip.io
+    ServerAlias flaschen-shop.localhost
+    ServerAlias en.flaschen-shop.localhost
+    ServerAlias flaschen-shop.localhost.*.xip.io
+    ServerAlias en.flaschen-shop.localhost.*.xip.io
     DocumentRoot /var/www/html/src
     <Directory /var/www/>
         DirectoryIndex index.php
