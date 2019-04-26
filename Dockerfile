@@ -27,7 +27,8 @@ RUN apt-get -yq  --no-install-recommends install \
         curl \
         pwgen \
         vim \
-        git
+        git \
+        sendmail
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer --insecure | php -- --install-dir=/usr/local/bin --filename=composer
