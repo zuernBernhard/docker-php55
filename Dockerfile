@@ -29,7 +29,7 @@ RUN apt-get -yq  --no-install-recommends install \
         vim \
         git \
         sendmail \
-        ssmtp \
+        ssmtp 
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer --insecure | php -- --install-dir=/usr/local/bin --filename=composer
