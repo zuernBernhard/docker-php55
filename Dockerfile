@@ -28,7 +28,7 @@ RUN apt-get -yq  --no-install-recommends install \
         pwgen \
         vim \
         git \
-        ssmtp 
+        ssmtp
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer --insecure | php -- --install-dir=/usr/local/bin --filename=composer
@@ -64,6 +64,5 @@ CMD service apache2 restart && tail -f /var/log/apache2/error.log
 
 # set up mailhog as sendmail target
 RUN echo "mailhub=mailhog:1025" >> /etc/ssmtp/ssmtp.conf
-RUN echo "sendmail_path=sendmail -i -t" >> /usr/local/etc/php/conf.d/php-sendmail.ini
 
 EXPOSE 80 22
