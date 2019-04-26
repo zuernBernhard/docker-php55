@@ -28,7 +28,6 @@ RUN apt-get -yq  --no-install-recommends install \
         pwgen \
         vim \
         git \
-        sendmail \
         ssmtp 
 
 # Install composer
